@@ -1,0 +1,12 @@
+Config flags:  "--user"
+Build flags:   "--ghc-option=-threaded --ghc-option=-rtsopts"
+Haddock flags: ""
+Executable flags:
+               ""
+Install flags: ""
+Register flags:
+               "-rtsopts -threaded"
+Unregister flags:
+               ""
+Source Distribution flags:
+               ""
