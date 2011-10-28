@@ -36,27 +36,10 @@ listNouns = ["fw-at+nn", "fw-at+np", "fw-in+nn", "fw-in+np", "fw-nn", "fw-nn$", 
              "nr$", "nr+md", "nrs"]
 
 
---
-type HashTable k v = H.CuckooHashTable k v --alias Cuckoo
+-- convenience aliases
+
+type HashTable k v = H.CuckooHashTable k v
 type ByteString = B.ByteString
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
