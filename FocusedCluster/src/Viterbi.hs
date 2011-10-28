@@ -250,11 +250,10 @@ insertHM acc k v = do
 -- coordinates a thread of viterbi training
 
 calibrateVit :: MVar [Map ByteString [Map ByteString Int]] -> [String] -> IO()
-calibrateVit mvar files =
-    mapM readFile files >>= \sAry ->
-    evaluate (L.map ((trainOn M.empty) . words) sAry) >>= \eval ->
+calibrateVit mvar files = do
+    strary <- mapM readFile files
+    eval <- evaluate (L.map ((trainOn M.empty) . words) strary)
     putMVar mvar eval
-
 
 
 ---------------------------------------------------------------------------------------------------
